@@ -29,10 +29,14 @@ public class Calculator {
                         operand1 *= operand2;
                         break;
                     case '/':
-                        operand1 /= operand2;
-                        break;
+                       if (operand2 != 0) {
+                            operand1 /= operand2;
+                            break;
+                        } else {
+                            System.out.println("На ноль делить нельзя!");
+                        }
                     default:
-                        System.out.println("Ошибка при вводе действия!");
+                        System.out.println("Ошибка при вводе данных!");
                         break;
                 }
             }
